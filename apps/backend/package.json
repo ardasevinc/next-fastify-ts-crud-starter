@@ -2,11 +2,22 @@
   "name": "backend",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "MIT",
+  "exports": "./dist/server.js",
+  "type": "module",
+  "engines": {
+    "node": ">=20",
+    "pnpm": ">=8",
+    "bun": ">=1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "bun run --watch ./src/server.ts",
+    "dev:compat": "concurrently \"tsc --watch -p ./tsconfig.json\" \"nodemon ./dist/server.js\"",
+    "prebuild": "rimraf ./dist",
+    "build": "pnpm run prebuild && tsc -p tsconfig.json",
+    "start:prod": "pnpm run build && node ./dist/index.js"
+  },
 }
