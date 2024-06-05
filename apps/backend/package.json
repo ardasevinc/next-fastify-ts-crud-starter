@@ -19,5 +19,5 @@
     "prebuild": "rimraf ./dist",
     "build": "pnpm run prebuild && tsc -p tsconfig.json",
     "start:prod": "pnpm run build && node ./dist/index.js"
-  },
+  }
 }
