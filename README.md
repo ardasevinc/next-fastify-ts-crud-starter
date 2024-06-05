@@ -1,4 +1,4 @@
-# Full-Stack Modern CRUD App Template
+# Full-Stack Modern CRUD Monorepo App Template
 
 TL; DR: Fullstack app with next.js for frontend. Fastify for backend.
 
