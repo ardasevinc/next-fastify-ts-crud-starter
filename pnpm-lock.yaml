@@ -6,6 +6,12 @@ settings:
 
 importers:
 
+  .:
+    devDependencies:
+      '@ardasevinc/prettier-config':
+        specifier: ^0.1.4
+        version: 0.1.4
+
   apps/backend:
     dependencies:
       '@fastify/env':
@@ -94,6 +100,10 @@ packages:
   '@alloc/quick-lru@5.2.0':
     resolution: {integrity: sha512-UrcABB+4bUrFABwbluTIBErXwvbsU/V7TZWfmbgJfbkwiBuziS9gxdODUyuiecfdGQ85jglMW6juS3+z5TsKLw==}
     engines: {node: '>=10'}
+
+  '@ardasevinc/prettier-config@0.1.4':
+    resolution: {integrity: sha512-nR09iKTWyyXBpo+PStUfaP/AKhPPXYCiL/L8RAsA5Du3c1uNadaqCWEo64Yp92X3cU8phBisl7bFCF+x1J9cgg==}
+    engines: {npm: '>=9'}
 
   '@babel/runtime@7.24.6':
     resolution: {integrity: sha512-Ja18XcETdEl5mzzACGd+DKgaGJzPTCow7EglgwTmHdwokzDFYh/MHua6lU6DV/hjF2IaOJ4oX2nqnjG7RElKOw==}
@@ -2058,6 +2068,8 @@ packages:
 snapshots:
 
   '@alloc/quick-lru@5.2.0': {}
+
+  '@ardasevinc/prettier-config@0.1.4': {}
 
   '@babel/runtime@7.24.6':
     dependencies:
