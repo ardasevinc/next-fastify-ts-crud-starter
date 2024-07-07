@@ -19,6 +19,8 @@
   "devDependencies": {
     "@ardasevinc/prettier-config": "^0.1.4"
   },
-  "prettier": "@ardasevinc/prettier-config"
+  "prettier": "@ardasevinc/prettier-config",
+  "dependencies": {
+    "concurrently": "^8.2.2"
+  }
 }
-
