@@ -17,7 +17,8 @@
     "dev": "bun run --watch ./src/server.ts",
     "dev:compat": "concurrently \"tsc --watch -p ./tsconfig.json\" \"nodemon ./dist/server.js\"",
     "prebuild": "rimraf ./dist",
-    "build": "pnpm run prebuild && tsc -p tsconfig.json",
+    "build": "pnpm run prebuild && tsc -p ./tsconfig.json; tsc-alias -p ./tsconfig.json",
+    "build:watch": "tsc --watch -p ./tsconfig.json; tsc-alias -p ./tsconfig.json",
     "start:prod": "pnpm run build && node ./dist/index.js"
   },
   "dependencies": {
@@ -30,7 +31,8 @@
     "fastify-plugin": "^4.5.1",
     "lucia": "^3.2.0",
     "oslo": "^1.2.0",
-    "rimraf": "^5.0.7"
+    "rimraf": "^5.0.7",
+    "tsc-alias": "^1.8.10"
   },
   "devDependencies": {
     "@types/node": "^20",
